@@ -1,0 +1,635 @@
+/*首页样式表*/
+
+/*设置导航条外部容器*/
+.bar-wrapper{
+    width: 100%;
+    height: 40px;
+    background-color: #333;
+}
+
+/*设置导航条内部div*/
+.bar-wrapper .top-bar{
+    height: 100%;
+    line-height: 40px;
+}
+
+/*设置左侧链接浮动*/
+.link-bar{
+    float: left;
+/*    line-height: 40px;*/
+}
+
+/*设置右侧链接浮动*/
+.cart-bar,.info-bar{
+    float: right;
+/*    line-height: 40px;*/
+}
+
+/*设置链接样式*/
+.top-bar a{
+    float: left;
+    font-size: 12px;
+    color: #b0b0b0;
+    text-decoration: none;
+/*    display: inline-block;*/
+    height: 40px;
+}
+/*设置鼠标移入效果*/
+.top-bar a:hover{
+    color: #fff;
+}
+
+
+/*设置小竖线*/
+.line{
+    float: left;
+    color: #424242;
+/*    font-size: 12px;*/
+    margin: 0 6px;
+}
+
+
+/*对下载app开启相对定位*/
+.link-bar .download-app{
+    position: relative;
+}
+/*设置下载app的下拉菜单*/
+.app-div{
+    width: 124px;
+    height: 150px;
+    background-color:#fff;
+    text-align: center;
+    line-height: 1;
+    box-shadow: 0 0 4px rgb(0,0,0,.3);
+    display: none;
+    position: absolute;
+    left: -40px;
+    z-index: 999;
+}
+/*设置小三角*/
+.arrow{
+    width: 0;
+    height: 0;
+    border: 10px solid #fff;
+    border-top: none;
+    border-color: transparent transparent #fff;
+/*   设置定位 居中*/
+    position: absolute;
+    top: -10px;
+/*    left: 52px;*/
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+/*设置下载app的二维码*/
+.download-app img{
+    width: 84px;
+    margin: 20px;
+}
+/*设置二维码下方文字*/
+.download-app span{
+    font-size: 14px;
+    color: #333;
+}
+/*设置鼠标移入下载app显示下拉菜单*/
+.download-app:hover .app-div{
+    display: block;
+}
+
+
+/*设置购物车样式*/
+.cart-bar a{
+    display: block;
+    width: 120px;
+    background-color: #424242;
+    text-align: center;
+    margin-left: 20px;
+}
+/*设置购物车定位*/
+.cart-bar{
+    position: relative;
+}
+/*设置购物车下拉菜单*/
+.cart-down{
+    width: 316px;
+    height: 0;
+    overflow: hidden;
+    background-color: #fff;
+/*    设置文字居中*/
+    text-align: center;
+    line-height: 100px;
+    box-shadow: 0 2px 2px rgb(0,0,0,.2);
+    position: absolute;
+    top: 40px;
+    right: 0;
+    z-index: 999;
+/*    设置动画效果*/
+    transition: height 200ms;
+}
+/*设置购物车下拉菜单文字*/
+.cart-bar .pro{
+    font-size: 12px;
+/* 也可设置文字位置居中
+    position: absolute;
+    top: 30px;
+    left: 50px
+*/
+}
+/*设置购物车鼠标移入效果*/
+.cart-bar:hover a{
+    background-color: #fff;
+    color: #ff6700;
+}
+/*设置鼠标移入购物车显示下拉菜单*/
+.cart-bar:hover .cart-down{
+    height: 100px;
+} 
+
+
+
+
+/*设置头部*/
+.header-wrapper{
+    position: relative;
+}
+.header{
+    height: 100px;
+    background-color: #fff;
+    /*position: relative;*/
+}
+/*设置logo*/
+.header .logo{
+    float: left;
+    margin-top: 22px;
+}
+/*设置logo图片*/
+.logo a{
+    display: block;
+    width: 55px;
+    height: 55px;
+/*
+    background-image: url(../img/placeholder-40.png);
+    background-color:#ff6700;
+    background-position: center;
+*/
+    background: url(../img/mi-logo.png) #ff6700 center;
+    text-indent: -999px;
+/*
+    position: absolute;
+    top: 22px;
+*/
+}
+
+/*设置头部导航条*/
+.header-nav{
+    float: left;
+    width: 810px;
+    height: 100px;
+    line-height: 100px;
+    margin-left: 65px;
+}
+/*设置导航条内li*/
+.header-nav >.nav>li{
+    float: left;
+    /*padding-right: 20px;*/
+    /*padding: 0 10px;*/
+    font-size: 16px;
+}
+/*设置导航条内链接字体*/
+.nav>li a{
+    text-decoration: none;
+    color: #333;
+    padding: 0 10px;
+}
+/*设置鼠标移入效果*/
+.header-nav li a:hover{
+    color: #ff6700
+}
+
+
+/*设置隐藏层*/
+.down{
+    width: 100%;
+    /*height: 230px;*/
+    height: 0;
+    overflow: hidden;
+    background-color: #fff;
+    /*设置绝对定位*/
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: 10000;
+    /*设置阴影*/
+    box-shadow: 0 3px rgba(0,0,0,.1);
+    /*增加过渡效果*/
+    transition: height 300ms;
+}
+/*鼠标移入显示隐藏层*/
+.active-hide:hover~ .down,
+.down:hover{
+    height: 230px;
+    border-top: 1px solid #e0e0e0;
+}
+
+
+/*设置左侧列表*/
+.left-nav{
+    height: 440px;
+    width: 234px;
+    background-color: rgba(0,0,0,.6);
+    padding-top: 20px;
+    position: absolute;
+    top: 100px;
+    margin-left: -120px;
+    z-index: 500;
+}
+/*设置左侧列表内部li*/
+.left-nav li{
+    height: 42px;
+    line-height: 42px;
+}
+/*设置超链接*/
+.left-nav li a{
+    display: block;
+    height: 42px;
+    color: #fff;
+    font-size: 14px;
+    padding-left: 30px; 
+}
+/*设置右箭头*/
+.left-nav li a::after{
+    content: '\f105';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    float: right;
+    margin-right: 30px;
+    font-size: 18px;
+}
+/*设置鼠标移入效果*/
+.left-nav li a:hover{
+    color: #fff;
+    background-color: #ff6700;
+}
+
+/*设置左侧边栏的隐藏栏*/
+.left-hidden{
+    display: none;
+    width: 992px;
+    height: 459px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-left: none;
+    /*设置阴影*/
+    box-shadow: 2px 6px 4px rgba(0,0,0,.1);
+    /*设置绝对定位*/
+    position: absolute;
+    top: 0;
+    left: 234px;
+    z-index: 100;
+}
+.middle{
+    width: 800px;
+}
+/*短的隐藏栏*/
+.short{
+    width: 500px;
+}
+/*鼠标移入显示隐藏栏*/
+.nav .left-nav li:hover .left-hidden{
+    display: block;
+}
+
+
+
+/*设置搜索框*/
+.search{
+    float: right;
+    margin-top: 25px;
+}
+/*设置文本输入框*/
+.search input[type='text']{
+    float: left;
+    width: 223px;
+    height: 50px;
+    border: 1px solid #e0e0e0;
+    font-size: 14px;
+    outline: none;
+    padding: 0 10px;
+}
+/*设置搜索放大镜*/
+.search button {
+    float: left;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    color: #616161;
+    font-size: 20px;
+    border: 1px solid #e0e0e0;
+    border-left: none;
+    padding: 0;
+    box-sizing: content-box;
+}
+/*设置聚焦效果*/
+.search input[type='text']:focus,
+.search input[type='text']:focus +button{
+    border-color: #ff6700;
+}
+/*设置鼠标移入效果*/
+button:hover{
+    background-color: #ff6700;
+    color: #fff;
+}
+
+/*设置文本输入框里的链接*/
+.search .da{
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    top: 37px;
+    right: 200px;
+}
+/*设置链接文字*/
+.search .da a{
+    color: #88759A;
+    background-color:#EEEEEE;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 2px 5px;
+}
+/*设置鼠标移入文字效果*/
+.search .da a:hover{
+    background-color: #ff6700;
+    color: #fff;
+}
+/*设置焦点 文字隐藏*/
+.search input[type='text']:focus~ .da{
+    display: none;
+}
+
+/*设置搜索框下拉菜单*/
+.search ul{
+    display: none;
+    background-color: #fff;
+    border: 1px solid #ff6700;
+    border-top: none;
+    position: absolute;
+    top: 77px;
+    z-index: 9999;
+}
+/*设置下拉菜单链接*/
+.search li a{
+    display: block;
+    width: 213px;
+    height: 30px;
+    line-height: 30px;
+    color: #424242;
+    font-size: 12px;
+    text-decoration: none;
+    padding: 1px 15px;
+}
+/*鼠标移入效果*/
+.search li a:hover{
+    background-color: #eee;
+}
+/*设置焦点 显示下拉菜单*/
+.search input[type='text']:focus~ .hidden{
+    display: block;
+}
+
+
+
+/*设置大图片*/
+.big{
+    height: 460px;
+    position: relative;
+}
+.big li{
+    position: absolute;
+}
+/*固定图片大小*/
+.big img{
+    width: 100%;
+}
+/*设置轮播图小圆点*/
+.big .point{
+    position: absolute;
+    bottom: 26px;
+    right: 34px;
+}
+/*设置轮播图小圆点*/
+.big .point a{
+    float: left;
+    width: 6px;
+    height: 6px;
+    background-color: rgba(0,0,0,.4);
+    border-radius: 50%;
+    margin-left: 10px;
+    border: 2px solid rgba(255,255,255,.3);
+}
+/*设置鼠标移入效果*/
+.big .point a:hover,
+.big .point .active{
+    background-color: rgba(255,255,255,.4);
+    border-color: rgba(0,0,0,.4);
+}
+
+/*设置翻页箭头图标*/
+.slide a{
+    width: 41px;
+    height: 69px;
+    background-image: url(../img/icon-slides.png);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    z-index: 9999;
+}
+/*设置左侧翻页图标*/
+.slide .pre{
+    left: 234px;
+    background-position: -84px 0;
+}
+/*设置右侧翻页图标*/
+.slide .next{
+    right: 0;
+    background-position: -125px 0;
+}
+/*设置鼠标移入效果*/
+.slide .pre:hover{
+    background-position: 0 0;
+}
+.slide .next:hover{
+    background-position: -42px 0;
+}
+
+
+/*设置右侧导航条*/
+.right{
+    background-color: #fff;
+    border: 1px solid #f5f5f5;
+    /*设置固定定位*/
+    position: fixed;
+    top: 120px;
+    right: 50%;
+    /*设置定位位置*/
+    margin-right: -765px;
+}
+/*设置边框*/
+.right li{
+    width: 82px;
+    height: 90px;
+    border-bottom: 1px solid #f5f5f5;
+}
+.right li:nth-child(5){
+    border-bottom: none;
+}
+/*设置图标字体*/
+.right span{
+    display: block;
+    font-size: 25px;
+    color: #999;
+    padding-top: 25px;
+}
+/*设置链接效果*/
+.right li a{
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: #757575;
+    text-align: center;
+}
+/*鼠标移入效果*/
+.right li a:hover{
+    color: #ff6700;
+}
+.right li a:hover span{
+    color: #ff6700;
+}
+
+.phone-app{
+    position: relative;
+}
+.phoneapp-div{
+    width: 124px;
+    height: 170px;
+    background-color:#fff;
+    text-align: center;
+    line-height: 1;
+    box-shadow: 0 0 4px rgba(0,0,0,.3);
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 90px;
+    z-index: 999;
+}
+.phoneapp-div img{
+    width: 84px;
+    margin: 20px;
+}
+.phoneapp-div span{
+    font-size: 14px;
+    color: #333;
+    padding-top: 0;
+}
+.arrow-left{
+    width: 0;
+    height: 0;
+    border: 10px solid #fff;
+    border-right: none;
+    border-color: transparent transparent transparent #fff;
+    position: absolute;
+    top: 40px;
+    right: -10px;
+}
+.phone-app:hover .phoneapp-div{
+    display: block;
+}
+
+/*设置服务框*/
+.xiaomi{
+    margin-top: 14px;
+}
+/*第一栏*/
+.xiaomi .service{
+    width: 234px;
+    height: 170px;
+    background-color: #5f5750;
+    float: left;
+}
+.xiaomi .icon-list li{
+    float: left;
+    position: relative;
+}
+/*第一栏里列表链接*/
+.xiaomi .icon-list li a{
+    display: block;
+    width: 78px;
+    height: 60px;
+    text-decoration: none;
+    color: #dbd6c5;
+    padding-top: 25px;
+    text-align: center;
+}
+.xiaomi .icon-list li a:hover{
+    color: #fff;
+}
+/*设置图标*/
+.xiaomi .icon-list li i{
+    display: block;
+    font-size: 20px;
+}
+/*设置边框线*/
+.xiaomi .icon-list li:nth-child(1):before,
+.xiaomi .icon-list li:nth-child(2):before,
+.xiaomi .icon-list li:nth-child(3):before{
+    content: '';
+    width: 66px;
+    height: 1px;
+    background-color: #665e57;
+    position: absolute;
+    bottom: 0;
+    left: 6px;
+}
+.xiaomi .icon-list li:nth-child(1):after,
+.xiaomi .icon-list li:nth-child(2):after,
+.xiaomi .icon-list li:nth-child(4):after,
+.xiaomi .icon-list li:nth-child(5):after{
+    content: '';
+    width: 1px;
+    height: 70px;
+    background-color: #665e57;
+    position: absolute;
+    top: 7.5px;
+    right: 0;
+}
+
+/*设置图片*/
+.xiaomi .ad{
+    float: left;
+    width: 316px;
+    height: 170px;
+    margin-left: 15px;
+}
+.xiaomi .ad img{
+    width: 100%;
+}
+.xiaomi .ad:nth-child(2){
+    margin-left: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
